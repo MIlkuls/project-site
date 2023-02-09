@@ -125,7 +125,7 @@ button{
 .modal-container{
       height:100%;
       width:100%;
-      position:fixed;
+      position:relative;
       z-index:1;
       display:none;
       overflow:hidden;
@@ -154,4 +154,17 @@ button{
 }
 .modal-container input{
    color:black;
+}
+
+.modal-thanks{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+
+}
+.modal-title{
+ font-weight: 600;
+ font-size: 48px;
+ line-height: 58px;
+ color: white;
 }

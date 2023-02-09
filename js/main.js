@@ -1,9 +1,6 @@
 const btn = document.querySelectorAll('[data-modal-open]'),
-      buttonSubmit = document.querySelectorAll('[data-modal-submit]')
       modal = document.querySelector('.modal-container'),
-      modalWindow = document.querySelector('.modal-window')
-      inputNumber = document.querySelector('#input-number'),
-      inputName = document.querySelector('#input-name'),
+      modalWindow = document.querySelector('.modal-window'),
       forms = document.querySelectorAll('form'),
       modalClose = document.querySelector('.modal-close');
 
@@ -14,11 +11,15 @@ btn.forEach(el=>{
        modal.style.display = 'block';
     })
 })
+modal.addEventListener('click', (e)=>{
+  if(e.target === modal || e.target === modalClose){
+    closeModal()
+  }
+})
 
-modalClose.addEventListener('click', closeModal)
 
-function closeModal(data){
-   data.style.display = 'none';
+function closeModal(){
+   modal.style.display = 'none';
 }
 
 
@@ -39,16 +40,18 @@ const postData = async (url,data) =>{
 
 
     const thanksModal = document.createElement('div')
-    thanksModal.classList.add('modal-dialog');
+    thanksModal.classList.add('modal-thanks');
     thanksModal.innerHTML = `<div class ="modal-title">${message}</div>`
     modal.append(thanksModal);
 
-    
+    modalWindow.style.visibility = 'hidden'
 
+    
     setTimeout(()=>{
         thanksModal.remove();
-        closeModal(modal)
-    },4000);
+         modalWindow.style.visibility = 'visible'
+        closeModal()
+    },2000);
   }
 
 forms.forEach( i =>{
