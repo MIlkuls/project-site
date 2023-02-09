@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel = "stylesheet"  href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="d-flex flex-column align-items-center ">
+    <div class="header d-flex justify-content-between">
+         <div class="header-title">
+            <h1>ONE<span>30</span></h1>
+         </div>
+            <ul class ="header-menu d-flex flex-row flex-wrap justify-content-evenly flex-grow-1">
+                <li>Home</li>
+                <li>Events</li>
+                <li>Blogs</li>
+                <li>Contact</li>
+            </ul>
+    </div>
+    <div class="container d-flex flex-column ">
+        <div class="container-info">
+            <p>GYM</p>
+            <h1>Get In Shape</h1>
+            <p>The Best Strength And Conditiong<br>Equiment</p>
+            <button data-modal-open class="rounded-pill">Try a free class</button>
+        </div>
+        <div class="container-configuration d-flex flex-wrap">
+            <div class="first-configuration">  
+                <h2 class="container-h2">GYM</h2>
+                <p>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry.</p>
+                <button data-modal-open class="rounded-pill">Button</button>
+            </div>
+            <div class ="second-configuration">  
+                <h2 class="container-h2">CLASSES</h2>
+                <p>Lorem Ipsum is simply dummy text of the<br>printing and typesetting industry. </p>
+                <button data-modal-open class="rounded-pill">Button</button></div>
+        </div>
+    </div>
+    <div class="modal-container position-fixed">
+		<div class="modal-window position-relative d-flex flex-column align-items-center row-gap-2">
+            <div class="modal-close">&times;</div>
+            <div class="modal__title">We'll call you</div>
+            <form class="d-flex flex-column align-items-center gap-3">
+			<input required class="rounded-pill" name = "name" id ="input-name" type="text" placeholder="Name Surname"/>
+			<input required class ="rounded-pill" name = "number" id ="input-number" type="text" placeholder="Phone number"/>
+			<button data-modal-submit class='rounded-pill'>Submit</button>
+		    </form>
+        </div>
+	</div>
+    <img src="img/back.jpg" class="background"/>
+    <script src="js/main.js"></script>
+</div>
+</body>
+
+</html>
